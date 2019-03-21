@@ -68,16 +68,17 @@ public class Calc {
         if (length <= 0) {
             System.out.println("Length must be > 0");
         } else {
-            int[] numbers = new int[length];
-            numbers[0] = 0;
+            int first = 0;
             if (length == 1) {
-                System.out.println(numbers[0]);
+                System.out.println(first);
             } else {
-                numbers[1] = 1;
-                System.out.print(numbers[0] + ", " + numbers[1] + ", ");
-                for (int i = 2; i < numbers.length; i++) {
-                    numbers[i] = numbers[i - 1] + numbers[i - 2];
-                    System.out.print(numbers[i] + ", ");
+                int second = 1;
+                System.out.print(first + ", " + second + ", ");
+                for (int i = 2; i < length; i++) {
+                    int current = first + second;
+                    System.out.print(current + ", ");
+                    first = second;
+                    second = current;
                 }
             }
         }
