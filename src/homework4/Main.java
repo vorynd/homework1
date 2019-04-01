@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        Car car = new Car(2000, "Auto", "Japan", "Mitsubishi", "Outlander", new Engine(150, 600), new Passenger[3], 4, 200);
+        Car car = new Car(2000, "Auto", "Japan", "Mitsubishi", "Outlander", new Engine(150, 150), new Passenger[3], 4, 200);
 
         Passenger passenger = new Passenger("John", 25);
         Passenger passenger1 = new Passenger("David", 25);
